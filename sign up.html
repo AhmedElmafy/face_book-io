@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sign up</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  </head>
+
+  <body class="bg-slate-50 capitalize dark:bg-slate-900">
+
+        <!-- loder -->
+        <div class="loder hidden fixed z-50 top-0 left-0 right-0 bottom-0 m-auto w-fit h-fit p-1 rounded-md bg-gray-900/40 dark:bg-gray-200/70">
+            <div
+            class="inline-block h-16 w-16 animate-spin rounded-full border-8 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite] border-gray-900"
+            role="status">
+            <span
+              class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+              >Loading...</span
+            >
+          </div>
+        </div>
+
+    <h1 class="fixed px-4 py-1 bg-red-400 rounded-md transition-all duration-300 -top-full left-1/2 text-center -translate-x-[50%] max-sm:w-[90%] dark:text-white max-sm:text-base" id="pas8">The password must contain at least 8 letters or numbers...</h1>
+
+    <header class="bg-slate-200 text-gray-900 select-none shadow-lg container mx-auto flex items-center justify-center px-5 py-4 rounded-b-2xl md:py-6 md:px-12 dark:shadow-slate-500/5 dark:bg-slate-800 dark:text-white">
+      <div class="flex items-center justify-between w-full">
+        <h2 class="logo select-none text-2xl font-bold cursor-default md:text-3xl">face_book</h2>
+        </div>
+    </header>
+
+    <section class="container mx-auto mt-24 flex items-center-center bg-slate-200 rounded-2xl shadow-lg px-6 py-3 md:space-x-7 dark:shadow-slate-500/5 dark:bg-slate-800 dark:text-white">
+        <div class="w-1/2 max-md:hidden">
+            <h2 class="logo select-none text-2xl font-bold cursor-default md:text-4xl mb-10">face_book</h2>
+            <div class="flex flex-col items-center justify-center space-y-3">
+                <h2 class="text-4xl font-bold tracking-widest">welcome!</h2>
+                <h3 class="text-2xl font-bold">to our new website</h3>
+                <p class="w-1/2 text-center">Hello, I am Ahmed Dahdouh&copy;, owner of this website in 2024, and this is my phone number 01288245415.</p>
+                <div class="icons text-xl space-x-2 select-none">
+                    <i class="fa-brands fa-instagram transition-all cursor-pointer hover:text-slate-500 dark:hover:text-slate-300"></i>
+                    <i class="fa-brands fa-facebook transition-all cursor-pointer hover:text-slate-500 dark:hover:text-slate-300"></i>
+                    <i class="fa-brands fa-twitter transition-all cursor-pointer hover:text-slate-500 dark:hover:text-slate-300"></i>
+                    <i class="fa-brands fa-github transition-all cursor-pointer hover:text-slate-500 dark:hover:text-slate-300"></i>
+                </div>
+            </div>
+        </div>
+        <span class="w-1 rounded-xl bg-slate-500 max-md:hidden"></span>
+        <div class="flex flex-col items-center justify-center flex-1 space-y-6">
+            <h2 class="mb-3 text-xl font-semibold">sign up</h2>
+            <div class="space-y-8 w-full">
+                <div class="relative w-full flex justify-center">
+                    <input type="text" placeholder="Name" id="name" class="bg-transparent w-full lg:w-1/2 -mt-2 -mr-4 pl-1 pr-5 rounded-lg py-1 border-b-2 border-black/30 transition-all duration-150 focus:outline-none focus:border-black dark:focus:border-white">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                <div class="relative w-full flex justify-center">
+                    <input type="text" placeholder="User" id="user" class="bg-transparent w-full lg:w-1/2 -mt-2 -mr-4 pl-1 pr-5 rounded-lg py-1 border-b-2 border-black/30 transition-all duration-150 focus:outline-none focus:border-black dark:focus:border-white">
+                    <i class="fa-solid fa-at"></i>
+                </div>
+                <div class="relative w-full flex justify-center">
+                    <input type="password" placeholder="Password" id="password" minlength="8" class="bg-transparent w-full lg:w-1/2 -mt-2 -mr-4 pl-1 pr-5 rounded-lg py-1 border-b-2 border-black/30 transition-all duration-150 focus:outline-none focus:border-black dark:focus:border-white">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <div class="relative w-full flex justify-center">
+                    <input type="file" id="img" class="bg-transparent text-sm cursor-pointer w-full lg:w-1/2 -mt-2 -mr-4 pl-1 pr-5 rounded-lg py-1 border-b-2 border-black/30 transition-all duration-150 focus:outline-none focus:border-black dark:focus:border-white">
+                    <i class="fa-regular fa-image"></i>
+                </div>
+            </div>
+            <button type="submit" class="bg-green-600 w-full py-1 rounded-sm font-semibold transition lg:w-1/2 hover:bg-green-500" id="sign-up">sign up</button>
+            <p>I have an account! <a href="./log in.html" class="font-semibold hover:text-slate-800 dark:hover:text-blue-100">log in</a></p>
+        </div>
+    </section>
+
+    <button id="dark-light" class="bg-slate-900 py-2 px-3 rounded-full text-gray-100 fixed bottom-6 right-6 shadow dark:bg-slate-100 dark:text-slate-800"><i class="fa-solid fa-circle-half-stroke"></i></button>
+  </body>
+  <!-- js Fill -->
+  <script src="axios.js"></script>
+  <script src="./sign up.js"></script>
+</html>

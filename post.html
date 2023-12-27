@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>post</title>
+
+    <!-- css link -->
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  </head>
+
+  <body class="bg-slate-50 capitalize dark:bg-slate-900">
+
+        <!-- loder -->
+        <div class="loder hidden fixed z-50 top-0 left-0 right-0 bottom-0 m-auto w-fit h-fit p-1 rounded-md bg-gray-900/40 dark:bg-gray-200/70">
+          <div
+          class="inline-block h-16 w-16 animate-spin rounded-full border-8 border-solid border-current border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite] border-gray-900"
+          role="status">
+          <span
+            class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+            >Loading...</span
+          >
+        </div>
+      </div>
+
+    <h1 class="fixed font-sans text-lg px-4 py-1 bg-green-500 rounded-md transition-all duration-300 -top-full left-1/2 text-center -translate-x-[50%] max-sm:w-[90%] dark:text-white max-sm:text-base" id="secc"></h1>
+
+    <h1 class="fixed font-sans text-lg bg-red-600 px-4 py-1 -top-full rounded-md z-50 transition-all duration-300 left-1/2 text-center -translate-x-[50%] dark:text-white max-sm:text-base" id="eroor-post"></h1>
+
+    <div class="bg-black/50 fixed -top-[150%] w-full duration-700 h-screen z-40 flex items-center justify-center flex-col dark:bg-white/50" id="add-post">
+        <div class="bg-slate-200 relative px-3 py-5 w-[90%] space-y-6 shadow rounded-lg flex items-center justify-center flex-col md:w-[60%] dark:bg-slate-900" onclick="">
+          <i class="fa-solid fa-circle-xmark absolute text-2xl cursor-pointer text-red-500 -top-1 -right-1" id="closs-new-post"></i>
+          <h1 class="text-black text-xl text-center font-semibold dark:text-white" id="titel-model-post">create a new post</h1>
+
+            <div class="relative w-full flex justify-center flex-col gap-y-3 lg:w-[80%]">
+              <label for="name" class="text-black text-lg block font-semibold dark:text-white">Title</label>
+              <input type="text" placeholder="Title" id="titel-add-post" class="bg-transparent text-black w-full normal-case mx-auto pl-1 pr-5 rounded-lg py-1 border-b-2 border-black/30 transition-all duration-150 focus:outline-none focus:border-black dark:focus:border-white dark:text-white dark:border-slate-500">
+            </div>
+
+            <div class="relative w-full flex justify-center">
+              <textarea name="" id="text-add-post" cols="30" rows="5" placeholder="Text" class="bg-transparent text-black w-full pl-1 pr-5 rounded-lg py-1 border-2 border-black/30 transition-all duration-150 lg:w-[80%] focus:outline-none focus:border-black dark:focus:border-white dark:text-white dark:border-slate-500"></textarea>
+            </div>
+
+            <div class="w-full flex justify-center flex-col">
+              <div class="relative w-full flex justify-center">
+                <input type="file" id="img-add-post" class="bg-transparent text-sm cursor-pointer w-full -mt-2 -mr-4 pl-1 pr-5 rounded-lg py-1 border-b-2 border-black/30 transition-all duration-150 lg:w-[80%] focus:outline-none focus:border-black dark:focus:border-white dark:border-slate-500 dark:text-white">
+                <i class="fa-regular fa-image dark:text-white"></i>
+              </div>
+              <h2 id="imgedit" class="text-sm text-red-700 font-bold block px-1 mx-auto mt-1.5 lg:w-[80%]">If you do not choose an image, the old image will not be changed</h2>
+            </div>
+
+            <button type="submit" id="submit-edit-post" class="bg-green-600 capitalize w-full py-1 rounded-sm font-semibold transition lg:w-[80%] hover:bg-green-500 dark:text-white">edit post</button>
+          </div>
+    </div>
+
+    <div class="areyoushour buttons hidden opacity-0 transition duration-500 fixed m-auto left-0 right-0 top-0 bottom-0 shadow-xl bg-slate-400 text-black w-fit h-fit px-10 py-5 flex justify-center items-center flex-col gap-7 dark:bg-slate-700 max-sm:w-[90%]">
+        <h1 class="font-bold text-lg text-red-600">Are you sure you want to delete the post?</h1>
+        <div class="flex items-center justify-between w-full px-6">
+          <button class="nopost bg-green-600 px-3 py-1 font-semibold select-none transition duration-500 hover:bg-green-500">Close</button>
+          <button class="yespost bg-red-600 px-3 py-1 font-semibold select-none transition duration-500 hover:bg-red-500">Delete</button>
+        </div>
+    </div>
+
+    <header class="bg-slate-200 text-gray-900 select-none shadow-lg container mx-auto flex items-center justify-center px-5 py-4 rounded-b-2xl md:py-6 md:px-12 dark:shadow-slate-500/5 dark:bg-slate-800 dark:text-white">
+        <div class="flex items-center justify-between w-full">
+        <h2 class="logo select-none text-2xl font-bold cursor-default md:text-3xl">face_book</h2>
+        </div>
+        <div class="hidden items-center justify-center flex-col md:flex" id="data-profile">
+          <a onclick="myprofile()">
+            <img src="" alt="nan" id="data-img" class="w-[55px] h-[55px] rounded-full border-gray-900 flex justify-center items-center cursor-pointer border-2 p-1 dark:border-white">
+          </a>
+        </div>
+    </header>
+
+    <h1 class="text-2xl font-bold container mx-auto my-12 dark:text-gray-100 md:text-3xl" id="name-user"></h1>
+
+    <section class="container mx-auto p-4 my-2 rounded-md dark:bg-slate-900">
+            <div id="box" class="bg-slate-200 py-2 shadow-md shadow-black/30 dark:bg-slate-800 rounded-xl mx-auto md:w-[85%] mb-10">
+                <!-- <div id="head" class="flex items-center px-4 space-x-3 mb-2">
+                <img src="${post.author.profile_image}" alt="" class="w-12 h-12 rounded-full cursor-pointer">
+                <div class="name">
+                    <h1 class="dark:text-white">Ahmed</h1>
+                    <span class="text-gray-500 block font-serif text-sm cursor-pointer dark:text-gray-300">@Ahmed Mohamed</span>
+                </div>
+                </div>
+                <div id="body" class="px-4">
+                <img src="${post.image}" alt="" class="w-[100%] h-fit object-contain mx-auto my-4 md:h-80">
+                <h3 class="text-xs text-gray-700 pt-2 dark:text-gray-300">3hour</h3>
+                </div>
+                <div id="footer" class="mt-3 px-4">
+                <h1 class="text-2xl mb-2 dark:text-white">Ahmed</h1>
+                <p class="text-gray-800 dark:text-gray-300">mohamed</p>
+                <hr class="my-3 border-slate-800 dark:border-white">
+                <h2 class="select-none dark:text-white flex items-center"><i class="fa-solid fa-comments mr-1"></i>comments(4)</h2>
+                <hr class="border-slate-800 mt-4 dark:border-white">
+                </div>
+                <div id="the-comments" class="mt-4">
+                    <div id="coment" class="px-4 py-[2px] odd:bg-slate-300 dark:odd:bg-slate-700">
+                        <div id="user" class="flex items-center space-x-3 mt-4">
+                            <img src="./2.jpg" alt="" class="w-[35px] h-[35px] rounded-full md:w-[45px] md:h-[45px]">
+                            <h1 class="text-md font-semibold flex flex-col dark:text-white md:text-lg">Ahmed <span class="text-sm font-normal font-serif">@Ahmed mohamed</span></h1>
+                        </div>
+                        <p class="text-gray-800 my-3 pl-2 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                    <div id="coment" class="px-4 py-[2px] odd:bg-slate-300 dark:odd:bg-slate-700">
+                        <div id="user" class="flex items-center space-x-3 mt-4">
+                            <img src="./2.jpg" alt="" class="w-[45px] h-[45px] rounded-full">
+                            <h1 class="text-lg font-semibold flex flex-col dark:text-white">Ahmed <span class="text-sm font-normal font-serif">@Ahmed mohamed</span></h1>
+                        </div>
+                        <p class="text-gray-800 my-3 pl-2 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                    <div id="coment" class="px-4 py-[2px] odd:bg-slate-300 dark:odd:bg-slate-700">
+                        <div id="user" class="flex items-center space-x-3 mt-4">
+                            <img src="./2.jpg" alt="" class="w-[45px] h-[45px] rounded-full">
+                            <h1 class="text-lg font-semibold flex flex-col dark:text-white">Ahmed <span class="text-sm font-normal font-serif">@Ahmed mohamed</span></h1>
+                        </div>
+                        <p class="text-gray-800 my-3 pl-2 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                    </div>
+                </div>
+                <div id="add-comment" class="flex px-4 items-center justify-between mt-4">
+                    <input type="text" minlength="20" placeholder="Add To Comment..." id="text-add-comment" class="rounded-l-xl bg-slate-100 border-b border-black flex-1 font-medium p-2 focus:outline-none dark:bg-slate-100">
+                    <button id="submit-add-comment" class="bg-green-600 px-6 py-2 text-black rounded-r-xl text-md border-b border-black transition font-semibold dark:text-white hover:bg-green-700">Add</button>
+                </div> -->
+        </div>
+    </section>
+
+    <button id="dark-light" class="bg-slate-900 py-2 px-3 rounded-full text-gray-100 fixed bottom-6 right-6 shadow dark:bg-slate-100 dark:text-slate-800"><i class="fa-solid fa-circle-half-stroke"></i></button>
+  </body>
+  <!-- js Fill -->
+  <script src="axios.js"></script>
+  <script src="./post.js"></script>
+</html>
